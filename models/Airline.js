@@ -31,7 +31,7 @@ Airline.init({
             allowNull: false,
             defaultValue: 15,
             validate: {
-                isNumerical: true
+                isNumeric: true
             }        
         },
     },

@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
 
     Airline.create({
 
-        ariline_name: req.body.airline_name,
+        airline_name: req.body.airline_name,
 
         price: req.body.price,
 
