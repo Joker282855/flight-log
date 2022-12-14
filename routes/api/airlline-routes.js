@@ -1,4 +1,4 @@
-const router = requrie('express').Router();
+const router = require('express').Router();
 const { Airline } = require('../../models');
 
 // gets all of the information for the ariline

@@ -34,13 +34,6 @@ Airline.init({
                 isNumerical: true
             }        
         },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'destination',
-                key: 'id'
-            }
-        }
     },
     {
         sequelize,
