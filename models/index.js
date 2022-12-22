@@ -1,3 +1,6 @@
 const Airline = require('./Airline');
 
-module.exports = { Airline };
+const Destination = require('./Destination')
+
+
+module.exports = { Airline, Destination };
