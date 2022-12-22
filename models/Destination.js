@@ -14,7 +14,14 @@ Destination.init ({
     desitnation_name: {
         type: DataTypes.STRING,
         allowNull: false
-    },   
+    },
+    airline_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'airline',
+            key: 'id'
+        }
+    }
 },
 {
     sequelize,
