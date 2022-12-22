@@ -1,5 +1,5 @@
 // name the model we are going to use
-const { Model, Datatypes, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
 // import the library that will define our model
 const sequelize = require('../config/connection');
