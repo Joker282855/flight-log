@@ -11,7 +11,7 @@ Destination.init ({
         primaryKey: true,
         autoIncrement: true
     },
-    desitnation_name: {
+    destination_name: {
         type: DataTypes.STRING,
         allowNull: false
     }
@@ -23,6 +23,6 @@ Destination.init ({
     underscored: true,
     modelName: 'destination'
 }
-)
+);
 
 module.exports = Destination;
