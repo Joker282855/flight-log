@@ -44,7 +44,6 @@ Airline.init({
     },
     {
         sequelize,
-        timestamps: false,
         freezeTableName: false,
         underscored: true,
         modelName: 'airline,'
