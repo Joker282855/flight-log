@@ -10,10 +10,6 @@ Destination.init ({
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-    },
-    destination_name: {
-        type: DataTypes.STRING,
-        allowNull: false
     }
 },
 {

@@ -2,52 +2,32 @@
 const { Model, DataTypes } = require('sequelize');
 
 // import the library that will define our model
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 // inital the model we are using
 class Airline extends Model {}
 
 // set up the parameters for our models information and initialize database
-Airline.init({
+Airline.init(
+    {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        airline_name: {
+        destination_name: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        price: {
-            type: DataTypes.DECIMAL,
-            alowNull: false,
-            validate: {
-                isDecimal: true
-            }
-        },
-        how_many: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 15,
-            validate: {
-                isNumeric: true
-            }        
-        },
-        destination_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'airline',
-                key: 'id'
-            }
         }
     },
-    {
+    { 
         sequelize,
-        freezeTableName: false,
+        timestamps: false,
+        freezeTableName: true,
         underscored: true,
-        modelName: 'airline,'
+        modelName: 'airline'
     }
-)
+);
 
 module.exports = Airline;
