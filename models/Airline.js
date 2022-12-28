@@ -33,6 +33,13 @@ Airline.init({
             validate: {
                 isNumeric: true
             }        
+        },
+        destination_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'airline',
+                key: 'id'
+            }
         }
     },
     {

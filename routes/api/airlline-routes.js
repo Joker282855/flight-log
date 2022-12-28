@@ -60,6 +60,8 @@ router.post('/', (req, res) => {
 
         how_many: req.body.how_many,
 
+        destination_id: req.body.destination_id
+
     })
 
         .then(dbAirlineData => res.json(dbAirlineData))
