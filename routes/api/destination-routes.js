@@ -5,7 +5,7 @@ const { Destination, Airline } = require('../../models');
 router.get('/', (req, res) => {
     Destination.findAll({
 
-        attributes: ['id', 'airline_name', 'price', 'qunatity', 'created_at' ],
+        attributes: ['id', 'airline_name', 'price', 'quantity', 'created_at' ],
         
         include: [
             {
