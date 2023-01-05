@@ -6,6 +6,6 @@ const destinationRoutes = require('./destination-routes');
 
 router.use('/airlines', airlineRoutes)
 
-router.use('/destination', destinationRoutes)
+router.use('/destinations', destinationRoutes)
 
 module.exports = router;
