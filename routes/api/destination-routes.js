@@ -17,6 +17,16 @@ router.get('/', (req, res) => {
             }
         ]
     })
+    
+    .then(dbDestinationData => res.json(dbDestinationData))
+
+    .catch(err => {
+        
+        console.log(err);
+
+        res.status(500).json(err);
+
+    });
 });
 
 module.exports = router;
