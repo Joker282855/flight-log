@@ -76,7 +76,7 @@ router.post('/', (req, res) => {
 
     Destination.create({
 
-        airline_anme: req.body.airline_anme,
+        airline_name: req.body.airline_name,
 
         price: req.body.price,
 
@@ -95,6 +95,43 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 
+});
+
+router.put('/:id', (req, res) => {
+
+    Destination.update({
+
+        destination_name: req.body.destination_name
+    },
+    {
+
+        where: {
+
+            id: req.params.id
+        }
+    }
+    )
+
+    .then(dbDestinationData => {
+
+        if (!dbDestinationData) {
+
+            res.status(404).json({ message: 'No destination found with this id' });
+
+            return;
+
+        }
+
+        res.json(dbDestinationData);
+
+    })
+
+    .catch(err => {
+
+        console.log(err);
+
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;
