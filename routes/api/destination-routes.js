@@ -7,6 +7,8 @@ router.get('/', (req, res) => {
     Destination.findAll({
 
         attributes: ['id', 'airline_name', 'price', 'quantity', 'created_at' ],
+
+        order: [['created_at', 'DESC']],
         
         include: [
             {
