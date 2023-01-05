@@ -72,4 +72,29 @@ router.get('/:id', (req, res ) => {
 
 });
 
+router.post('/', (req, res) => {
+
+    Destination.create({
+
+        airline_anme: req.body.airline_anme,
+
+        price: req.body.price,
+
+        quantity: req.body.quantity,
+
+        airline_id: req.body.airline_id
+
+    })
+
+    .then(dbDestinationData => res.json(dbDestinationData))
+
+    .catch(err => {
+
+        console.log(err);
+
+        res.status(500).json(err);
+    });
+
+});
+
 module.exports = router;
