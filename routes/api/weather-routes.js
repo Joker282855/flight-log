@@ -5,7 +5,7 @@ const { Destination, Weather } = require('../../models')
 
 // creating routes to retrieve the wanted infromation
 router.get('/', (req, res) => {
-
+    
 });
 
 router.get('/:id', (req, res) => {
