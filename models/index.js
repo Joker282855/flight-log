@@ -4,6 +4,8 @@ const Destination = require('./Destination')
 
 const Weather = require('./Weather');
 
+const Forecast = require('./Forecast');
+
 Airline.hasMany(Destination, {
     foreignKey: 'airline_id'
 });
@@ -13,4 +15,4 @@ Destination.belongsTo(Airline, {
 });
 
 
-module.exports = { Airline, Destination, Weather };
+module.exports = { Airline, Destination, Weather, Forecast };

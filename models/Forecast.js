@@ -37,4 +37,4 @@ Forecast.init(
     }
 );
 
-module.exprts = Forecast
+module.exports = Forecast
