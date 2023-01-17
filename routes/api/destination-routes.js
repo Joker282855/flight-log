@@ -101,20 +101,6 @@ router.post('/', (req, res) => {
     })
 
     .then(dbDestinationData => res.json(dbDestinationData))
-    
-    .then((destination) => {
-        if (req.body.weatherIds.length) {
-            const destinationWeatherIdArr = req.body.weatherIds.mag((weather_id) => {
-                return {
-                    destination_id: destination.id,
-                    weather_id,
-                };
-            });
-            return Forecast.bulkCreate(destinationWeatherIdArr);
-        }
-        res.status(200).json(destination);
-    })
-    .then((destinationWeatherIds) => res.status(200).json(destinationWeatherIds))
 
     .catch(err => {
 
@@ -127,7 +113,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
 
-    Destination.update({
+    Destination.update(req.body, {
         airline_name: req.body.airline_name
     },
     {
