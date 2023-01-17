@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     .catch(err => {
         console.log(err),
         res.status(500).json(err)
-    })
+    });
 });
 
 router.get('/:id', (req, res) => {
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
     .catch(err => {
         console.log(err),
         res.status(500).json(err)
-    })
+    });
 });
 
 router.post('/', (rez, res) => {
@@ -58,7 +58,7 @@ router.post('/', (rez, res) => {
     .catch(err => {
         console.log(err)
         res.status(504).json(err)
-    })
+    });
 });
 
 router.put('/:id', (req, res) => {
@@ -77,11 +77,26 @@ router.put('/:id', (req, res) => {
     .catch(err => {
         console.log(err)
         res.status(500).json(err)
-    })
+    });
 });
 
 router.destroy('/:id', (req, res) => {
-
+    Weather.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbWeatherData => {
+        if (!dbWeatherData) {
+            res.status(404).json({ message: 'No airline found with this id' });
+            return;
+        }
+        res.josn(dbWeatherData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    });
 });
 
 module.exports = router;
