@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Destination, Airline } = require('../../models');
+const { Destination, Airline, Weather, Forecast } = require('../../models');
 
 router.get('/', (req, res) => {
 
@@ -17,6 +17,12 @@ router.get('/', (req, res) => {
 
                 attributes: ['destination_name']
 
+            },
+            {
+                model: Weather,
+                attributes: ['weather_condition'],
+                through: Forecast,
+                as: 'weather_forecasted' 
             }
         ]
     })
