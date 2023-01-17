@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Destination,
-                attributes: ["arinline_name"],
+                attributes: ["airline_name"],
                 through: Forecast,
                 as: 'weather_forecasted'
             }
@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (rez, res) => {
+router.post('/', (req, res) => {
     Weather.create({
         weather_condition: req.body.weather_condition
     })

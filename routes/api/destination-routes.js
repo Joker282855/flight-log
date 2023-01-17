@@ -102,8 +102,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
 
     Destination.update({
-
-        destination_name: req.body.destination_name
+        airline_name: req.body.airline_name
     },
     {
 
