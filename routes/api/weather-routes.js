@@ -51,11 +51,33 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (rez, res) => {
-
+    Weather.create({
+        weather_condition: req.body.weather_condition
+    })
+    .then(dbWeatherData => res.json(dbWeatherData))
+    .catch(err => {
+        console.log(err)
+        res.status(504).json(err)
+    })
 });
 
 router.put('/:id', (req, res) => {
-
+    Weather.update({
+        where: {
+            id: req.paramsid
+        }
+    })
+    .then(dbWeatherData => {
+        if (!dbWeatherData) {
+            res.status(404).json({ message: 'No airline found with this id' });
+            return;
+        }
+        res.json(dbWeatherData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
 });
 
 router.destroy('/:id', (req, res) => {
