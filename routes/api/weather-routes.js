@@ -62,13 +62,13 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    Weather.update({
+    Weather.update(req.body, {
         where: {
-            id: req.paramsid
+            id: req.params.id
         }
     })
     .then(dbWeatherData => {
-        if (!dbWeatherData) {
+        if (!dbWeatherData[0]) {
             res.status(404).json({ message: 'No airline found with this id' });
             return;
         }
@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.destroy('/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     Weather.destroy({
         where: {
             id: req.params.id
@@ -91,7 +91,7 @@ router.destroy('/:id', (req, res) => {
             res.status(404).json({ message: 'No airline found with this id' });
             return;
         }
-        res.josn(dbWeatherData)
+        res.json(dbWeatherData)
     })
     .catch(err => {
         console.log(err)

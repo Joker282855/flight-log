@@ -4,7 +4,7 @@ const airlineRoutes = require('./airlline-routes');
 
 const destinationRoutes = require('./destination-routes');
 
-const weatherRoutes = require('./destination-routes');
+const weatherRoutes = require('./weather-routes');
 
 router.use('/airlines', airlineRoutes)
 
