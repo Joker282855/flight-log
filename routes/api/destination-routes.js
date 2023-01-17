@@ -47,13 +47,19 @@ router.get('/:id', (req, res ) => {
             id: req.params.id
         },
 
-        attributes: ['id', 'airline_name', 'price', 'quantity', 'created_at' ],
+        attributes: ['id', 'airline_name', 'price', 'quantity', 'airline_id', 'created_at' ],
 
         include: [
             {
                 model: Airline,
 
                 attributes: ['destination_name']
+            },
+            {
+                model: Weather,
+                attributes: ['weather_condition'],
+                through: Forecast,
+                as: 'weather_forecasted'
             }
         ]
 
