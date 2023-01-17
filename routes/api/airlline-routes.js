@@ -1,10 +1,18 @@
 const router = require('express').Router();
-const { Airline } = require('../../models');
+const { Airline, Destination } = require('../../models');
 
 // gets all of the information for the ariline
 router.get('/', (req, res) => {
 
-    Airline.findAll()
+    Airline.findAll({
+        attributes: ['id', 'destination_name'],
+        include: (
+            {
+                model: Destination,
+                attributes: ['id', 'airline_name', 'price', 'quantity']
+            }
+        )
+    })
 
         .then(dbAirlineData => res.json(dbAirlineData))
         
@@ -26,7 +34,13 @@ router.get('/:id', (req, res) => {
 
             id: req.params.id
 
-        }
+        },
+        include: (
+            {
+                model: Destination,
+                attributes: ['id', 'airline_name', 'price', 'quantity']
+            }
+        )
     })
         .then(dbAirlineData => {
 
