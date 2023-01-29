@@ -27,5 +27,12 @@ const airlineData = [
     },
     {
         destination_name: 'Paris, France'
-    }
-]
+    },
+    {
+        destination_name: 'Toronto, Canada'
+    },
+];
+
+const seedAirline = () => Airline.bulkCreate(airlineData);
+
+module.exports = seedAirline;
