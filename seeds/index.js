@@ -5,3 +5,23 @@ const seedWeather = require('./weather');
 
 const sequelize = require('../config/connection');
 
+const seedAll = async () => {
+    await sequelize.sync({ force: true });
+    console.log('DATABASE SYNCED');
+
+    await seedAirline();
+    console.log('Airline Seeded');
+
+    await seedDestination();
+    console.log('Airline Seeded');
+
+    await seedForecast();
+    console.log('Forecast Seeded');
+
+    await seedWeather();
+    console.log('Weather Seeded');
+
+    process.exit(0);
+};
+
+seedAll();
