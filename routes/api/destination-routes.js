@@ -117,13 +117,11 @@ router.put('/:id', (req, res) => {
         airline_name: req.body.airline_name
     },
     {
-
         where: {
 
             id: req.params.id
         }
-    }
-    )
+    })
 
     .then(dbDestinationData => {
 

@@ -13,13 +13,13 @@ const seedAll = async () => {
     console.log('Airline Seeded');
 
     await seedDestination();
-    console.log('Airline Seeded');
-
-    await seedForecast();
-    console.log('Forecast Seeded');
+    console.log('Destination Seeded');
 
     await seedWeather();
     console.log('Weather Seeded');
+
+    await seedForecast();
+    console.log('Forecast Seeded');
 
     process.exit(0);
 };
