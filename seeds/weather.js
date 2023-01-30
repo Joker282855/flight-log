@@ -24,8 +24,14 @@ const weatherData = [
     },
     {
         weather_condition: 'Rainy',
-    }
-]
+    },
+    {
+        weather_condition: 'Mostly Sunny',
+    },
+    {
+        weather_condition: 'Rainy',
+    },
+];
 
 const seedWeather = () => Weather.bulkCreate(weatherData);
 

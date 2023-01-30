@@ -26,10 +26,10 @@ const airlineData = [
         destination_name: 'Spokan, Washington',
     },
     {
-        destination_name: 'Paris, France'
+        destination_name: 'Paris, France',
     },
     {
-        destination_name: 'Toronto, Canada'
+        destination_name: 'Toronto, Canada',
     },
 ];
 
