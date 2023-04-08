@@ -2,9 +2,11 @@
 Flight Log
 
 # Description:
-This is a database I created as a way to practice my aility to create relational databases. This ddatabases uses the language of SQL primarily and was based on creating a log
-for different airlines. The price, quantity, and where the airline is going is what makes up the data for this database. Users have the ability to pull up all of the
-information associated with each airline and modify the information on the databse through get, post, put, and delete routes. 
+This is a database that ariline companies can use to log thier flights and destination of each flight. 
+Airlines can use this database to add additional flights, remove flights, and forecast the weather of each
+flight. People who use this flight log can pull up all of the information associated with each airline and 
+modify the information on the databse through get, post, put, and delete routes. Routes tell the computer
+wehre to get information from the database itself. 
 
 # Tasks:
 1. As a user I can post the names of each airline that is currently at the airport.
@@ -18,6 +20,8 @@ information associated with each airline and modify the information on the datab
 I was able to do all of these tasks by reviewing previous databases that I had made in the past and use them as guides while creating this database. Looking at my old projects from 
 the bootcamp was a big help in making this database from scratch. I also reviewed the old lesson material the bootcamp at Utah University used to teach my cohort. Reviewing the old
 lesson material also helped me remeber what steps are needed to create a database. 
+
+# Walkthrough Video
 
 # Contributors:
 Made by Joshua Jackson
