@@ -21,6 +21,23 @@ I was able to do all of these tasks by reviewing previous databases that I had m
 the bootcamp was a big help in making this database from scratch. I also reviewed the old lesson material the bootcamp at Utah University used to teach my cohort. Reviewing the old
 lesson material also helped me remeber what steps are needed to create a database. 
 
+# Downloading The Database
+The first thing I person needs to do to download this database onto thier own computer is to have visual studio code downlaoded
+onto thier computer. The link to install Visual Studio Code onto your computer is listed below. Make sure to download the version
+that is specific to your computer. 
+
+<a href="https://code.visualstudio.com/download">Visual Studio Code Downlaod</a>
+
+After installing this onto your coumputer a person needs to vist my github profile page and look up the repository titled 
+flight log. The link to the repository is listed below.
+
+<a href="https://github.com/Joker282855/mongoose-database-again">Repository Link</a>
+
+At the top right corner of the respoistory there is a green button that contains the link needed to download this database
+onto other computers. Choose the http option when you clik on the green button and then copy/paste it into Visual Studio 
+Code. Before pasting the http link otpion into visual studio code a command needs to be entered to initiate the download
+of the database.
+
 # Walkthrough Video
 
 # Contributors:
