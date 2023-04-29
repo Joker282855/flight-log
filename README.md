@@ -20,8 +20,8 @@ the computer wehre to retireve the information from the database.
 I was able to do all of these tasks by reviewing previous databases that I had made in the past and use 
 them as guides while creating this database. Looking at my old projects from the bootcamp was a big help 
 in making this database from scratch. I also reviewed the old lesson material the bootcamp at Utah University 
-used to teach my cohort. Reviewing the old lesson material also helped me remeber what steps are needed to 
-create a database. 
+used to teach my cohort. Reviewing the old lesson material during the database's construction helped me remeber 
+what steps are needed to create a database. 
 
 # Downloading The Database
 The first thing a person needs to do to download this database onto thier own computer is to have visual studio code downlaoded
