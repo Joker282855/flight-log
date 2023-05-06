@@ -6,7 +6,7 @@ This is a database that ariline companies can use to log thier flights and desti
 Airlines can use this database to add additional flights, remove flights, and the weather forecast of the
 target destination. People who use this flight log can pull up all of the information associated with each 
 airline and modify the information on the databse through get, post, put, and delete routes. Routes tell 
-the computer wehre to retireve the information from the database.  
+the computer wehre the information from the database is stored and how to rerieve it. 
 
 # Tasks:
 1. As a user I can post the names of each airline that is currently at the airport.
