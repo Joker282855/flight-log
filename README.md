@@ -3,10 +3,10 @@ Flight Log
 
 # Description:
 This is a database that ariline companies can use to log thier flights and destination of each flight. 
-Airlines can use this database to add additional flights, remove flights, and the weather forecast of the
-target destination. People who use this flight log can pull up all of the information associated with each 
-airline and modify the information on the databse through get, post, put, and delete routes. Routes tell 
-the computer wehre the information from the database is stored and how to rerieve it. 
+Airlines can use this database to add additional flights, remove flights, and check the weather forecast of the
+target destination. Airline workers who use this flight log to pull up all of the information associated with the 
+airline they work for and modify it through get, post, put, and delete routes. Each of these routes tell 
+the computer wehre the information from the database is stored and how to rerieve or delete it. 
 
 # Tasks:
 1. As a user I can post the names of each airline that is currently at the airport.
